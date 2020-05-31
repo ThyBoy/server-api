@@ -6,7 +6,7 @@ const knex = require('knex');
 const Clarifai = require('clarifai');
 
 const clarifaiapp = new Clarifai.App({
-  apiKey: 'f0c3bf16a3b1497395e6856bf53df6e8'
+  apiKey: process.env.API_KEY
  });
 
 const datab=knex({
