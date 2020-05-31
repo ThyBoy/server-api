@@ -66,7 +66,7 @@ app.post('/register', (req,res)=>{
     .then(trx.commit)
     .catch(trx.rollback)
   })
-  .catch(err => res.status(400).json("Unable to Register"))
+  // .catch(err => res.status(400).json("Unable to Register"))
 })
 
 app.get('/profile/:id', (req,res)=>{
