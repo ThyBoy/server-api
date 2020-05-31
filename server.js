@@ -23,7 +23,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors())
 
-app.get('/',(req,res)=> res.json("app running"))
+app.get('/',(req,res)=> res.send("app running"))
 
 app.post('/signin', (req,res)=> {
   datab.select('email','hash').from('login')
