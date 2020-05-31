@@ -12,10 +12,8 @@ const clarifaiapp = new Clarifai.App({
 const datab=knex({
   client: 'pg',
   connection: {
-    host: '127.0.0.1',
-    user: 'postgres',
-    password: 'user',
-    database: 'app'
+    connectionString : process.env.DATABASE_URL,
+    ssl: true
   }
 })
 
